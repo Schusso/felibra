@@ -1,0 +1,10 @@
+<div *ngIf="percentage | async as snap">
+  {{ snap.bytesTransferred }} of {{ snap.totalBytes }}
+
+  <div *ngIf="downloadURL as url">
+  <h3>Result!</h3>
+    <img [src]="url" alt="">
+    <a [href]="url" target="_blank" rel="noopener">Donwload Me!</a>
+  </div>
+
+</div>
