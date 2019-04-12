@@ -35,15 +35,14 @@ export class AuthService {
 
   async googleSignIn() {
     const provider = new auth.GoogleAuthProvider();
-    alert('asdja');
     const credential = await this.afAuth.auth.signInWithPopup(provider);
-    return this.updateUserData(credential.user);
+    return this.updateUserData(credential.user) && this.router.navigate(['/layout']);
   }
 
   async signOut() {
     await this.afAuth.auth.signOut();
     this.user$ = null;
-    return this.router.navigate(['/']);
+    return this.router.navigate(['/login']);
   }
 
   private updateUserData(user) {
@@ -53,8 +52,8 @@ export class AuthService {
     const data = {
       uid: user.uid,
       email: user.email,
-      firstName: 'firstName',
-      lastName: 'lastName',
+      firstName: 'Patrick',
+      lastName: 'von Allmen',
     };
     // user.firstName,
     // user.lastName

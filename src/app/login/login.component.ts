@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   }
   signIn() {
     this.auth.googleSignIn().then(function () {
-      this.router.navigate(['/']);
+      return this.router.navigate(['layout']);
     });
   }
 }

@@ -16,20 +16,23 @@
 
 <!-- User NOT logged in -->
 <ng-template #guest>
-  <h3>Howdy, GUEST</h3>
+  <div class="box is-centered has-text-centered guest">
+  <div class="box"><h3>Hello, GUEST</h3>
   <p>Login to get started...</p>
-
-  <button (click)="auth.googleSignIn()">
+  </div>
+  <button class="button" (click)="signIn()">
     <i class="fa fa-google"></i> Connect Google
   </button>
-
+  </div>
 </ng-template>
 
 
 <!-- User logged in -->
 <ng-template #authenticated>
   <div *ngIf="auth.user$ | async as user">
-    <h3>Howdy, {{ user.firstName }}</h3>
+    <img src="https://bulma.io/images/placeholders/96x96.png" alt="">
+    <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+    <p>Email: {{ user.email }}</p>
     <p>UID: {{ user.uid }}</p>
     <button (click)="auth.signOut()">Logout</button>
   </div>

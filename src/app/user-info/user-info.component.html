@@ -17,12 +17,15 @@
       </div>
     </div>
 
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-    </div>
+    <!-- User logged in -->
+    <ng-template #authenticated>
+      <div *ngIf="auth.user$ | async as user">
+        <img src="https://bulma.io/images/placeholders/96x96.png alt="">
+        <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+        <p>Email: {{ user.email }}</p>
+        <p>UID: {{ user.uid }}</p>
+        <button (click)="auth.signOut()">Logout</button>
+      </div>
+    </ng-template>
   </div>
 </div>
