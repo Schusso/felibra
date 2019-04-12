@@ -13,6 +13,7 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
 import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
     FileUploadComponent,
     FileUploaderComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

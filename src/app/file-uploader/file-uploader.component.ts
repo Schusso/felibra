@@ -10,7 +10,7 @@ export class FileUploaderComponent implements OnInit {
 
   files: File[] = [];
 
-  toggleHover(event: boolean){
+  toggleHover(event: boolean) {
     this.isHovering = event;
   }
 
