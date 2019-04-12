@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   firebase: {
     apiKey: 'AIzaSyDFxURycjPfSGrwOZgjOrzm6W946Ffqd3U',
-    authDomain: 'felibra.firebaseapp.com',
+    databaseURL: 'https://felibra-1337.firebaseio.com',
+    authDomain: 'felibra-1337.firebaseapp.com',
     projectId: 'felibra-1337',
     storageBucket: 'gs://felibra-1337.appspot.com/',
     messagingSenderId: 'felibra'
