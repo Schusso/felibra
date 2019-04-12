@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
     AngularFirestoreModule,
     AngularFireStorageModule
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
