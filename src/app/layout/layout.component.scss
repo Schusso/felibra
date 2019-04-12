@@ -1,0 +1,13 @@
+.centered {
+  width: 60%;
+}
+
+.left-container {
+  width: 40%;
+  flex-direction: column;
+}
+
+.all {
+  flex-direction: row;
+  flex: 1;
+}

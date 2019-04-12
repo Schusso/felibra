@@ -15,6 +15,9 @@ export class LoginComponent implements OnInit {
   signIn() {
     this.auth.googleSignIn().then(function () {
       console.log('success');
+      alert('then');
+    }).catch(function (err) {
+      console.log(err);
     });
   }
 }

@@ -17,6 +17,9 @@ import { LoginComponent } from './login/login.component';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { FilesComponent } from './files/files.component';
+import { LayoutComponent } from './layout/layout.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import {HttpClientModule} from '@angular/common/http';
     FileUploaderComponent,
     FooterComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    FilesComponent,
+    LayoutComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
